@@ -5,13 +5,12 @@ filename=grnsq.log
 str="$count green square(s) added."
 year="2022"
 
-
-get_git () {
-    printf "Enter your GitHub repository URL: "
-    read url
-    git clone $url
-    cd $(basename $url .git)
-}
+#get_git () {
+#    printf "Enter your GitHub repository URL: "
+#    read url
+#    git clone $url
+#    cd $(basename $url .git)
+#}
 
 get_grnsqr () { # $1 = $str, $2 = $filename, $3 = $year
     echo $1 >> $2
