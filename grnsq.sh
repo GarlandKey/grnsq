@@ -1,9 +1,9 @@
 #!/bin/bash
 
 count=1
-filename=/log/grnsq.log
+filename=grnsq.log
 str="$count green square(s) added."
-year="2022"
+year="2021"
 
 check_quit () {
     read -s -n 1 -t 0.1 input
@@ -22,8 +22,10 @@ touch $filename
 while [ "true" ]
 do
     echo $str >> $filename
+    echo $str
     git add .
     git commit --date="$year-$[$RANDOM % 12 + 1]-$[$RANDOM % 28 + 1]" -m "$str"
-    let "count++"
+    ((count++))
+    str="$count green square(s) added."
     check_quit
 done
