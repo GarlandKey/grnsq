@@ -1,7 +1,7 @@
 #!/bin/bash
 
 count=1
-filename=grnsq.log
+filename=/log/grnsq.log
 str="$count green square(s) added."
 year="2022"
 
@@ -18,7 +18,7 @@ printf "Enter your GitHub repository URL: "
 read url
 git clone $url
 cd $(basename $url .git)
-
+touch $filename
 while [ "true" ]
 do
     echo $str >> $filename
