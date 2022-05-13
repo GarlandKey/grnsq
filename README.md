@@ -14,6 +14,10 @@ This bash script will generate endless beautiful green squares for your viewing 
 ```bash
 chmod +x grnsq.sh
 ```
+* To run the script:
+```bash
+./grnsq.sh
+```
 
 **NOTE:** This application works very quickly so pay attention to the commit number. When you want it to stop, press **Q**. 
 
